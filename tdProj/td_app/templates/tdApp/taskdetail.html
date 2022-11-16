@@ -1,0 +1,38 @@
+{% extends 'tdapp/layout.html' %}
+
+{% block body%}
+<section class="h-100 gradient-form" style="background-color: #eee;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black text-">
+          <div class="row g-0">
+              <div class="card-body p-md-5 mx-md-4">
+
+                <div class="text-center">
+                  <img src='https://play-lh.googleusercontent.com/pjUulZ-Vdo7qPKxk3IRhnk8SORPlgSydSyYEjm7fGcoXO8wDyYisWXwQqEjMryZ_sqK2'
+                    style="width: 185px;" alt="logo">
+                  <h4 class="mt-1 mb-5 pb-1">{{task.content.title}}, Priority: {{task.priority}}</h4>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center pb-4">
+                  <a href = "{{task.id}}/delete"><button type="button" class="btn btn-outline-danger">Delete task</button><a>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center pb-4">
+                    <form action="{{task.id}}/update" method = 'POST'>
+                        <center><h4><u> Edit Task </u></h4></center>
+                        <table style="margin: 0 auto">
+                            {{form.as_table}}
+                        </table>
+                        <input auto" type = "submit" value="Edit Task">
+                    </form>  
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock%}

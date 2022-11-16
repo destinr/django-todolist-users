@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> To Do App</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    </head>
+
+<body>
+<section class="h-100 gradient-form" style="background-color: #eee;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black text-">
+          <div class="row g-0">
+              <div class="card-body p-md-5 mx-md-4">
+
+                <div class="text-center">
+                  <img src='https://adniasolutions.com/wp-content/uploads/2018/05/To-Do-List-Excel-Template-01.png'
+                    style="width: 185px;" alt="logo">
+                  <h4 class="mt-1 mb-5 pb-1">Destin's To Do App</h4>
+                </div>
+
+                <form action='/login' method="POST">
+                  <p>Please login to your account</p>
+
+                  <div class="form-outline mb-4">
+
+                    <input type="text" name="email" class="form-control"
+                      placeholder="Email address" />
+                    <label class="form-label" for="email">Username</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" name="password" class="form-control" placeholder="Password" />
+                    <label class="form-label" for="password">Password</label>
+                  </div>
+
+                  <button class="d-flex btn btn-outline-success">Log in</button>
+                </form>
+
+                <div class="d-flex align-items-center justify-content-center pb-4">
+                  <p class="mb-0 me-2">Don't have an account?</p>
+                  <a href = '/signup'><button type="button" class="btn btn-outline-danger">Create account</button><a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
+
+

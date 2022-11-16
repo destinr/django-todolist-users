@@ -1,0 +1,23 @@
+{% extends 'tdapp/layout.html' %}
+
+{% block body%}
+<div class="container">
+    <div class="row text-center">
+      <div class="col-sm">
+        <center><h4><u> Tasks </u></h4></center>
+        {% for task in tasks%}
+        <li><a href ="{{user}}/{{task.id}}"> Task: {{task.content.title}}, Priority: {{task.priority}}</a></li>    
+        {% endfor %}  
+    </div>
+
+    <div class="col-sm my-auto">
+        <form action="{{user}}/addtask" method = 'POST'>
+            <center><h4><u> Add Task </u></h4></center>
+            <table style="margin: 0 auto">
+                {{form.as_table}}
+            </table>
+            <input auto" type = "submit" value="Add Task">
+        </form>   
+    </div>
+</div>
+{% endblock%}
